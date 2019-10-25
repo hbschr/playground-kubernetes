@@ -2,6 +2,13 @@ info:
 	kubectl get pods
 	kubectl get replicationcontroller
 	kubectl get replicaset
+	kubectl get deployments
+
+rollout-status:
+	kubectl rollout status deployment/myapp-deployment
+
+rollout-history:
+	kubectl rollout history deployment/myapp-deployment
 
 create-pod:
 	kubectl create -f pod-definition.yml
@@ -12,6 +19,9 @@ create-rc:
 create-replicaset:
 	kubectl create -f replicaset-definition.yml
 
+create-deployment:
+	kubectl create -f deployment-definition.yml
+
 clean-pod:
 	kubectl delete pod myapp-pod
 
@@ -20,3 +30,6 @@ clean-rc:
 
 clean-replicaset:
 	kubectl delete replicaset myapp-replicaset
+
+clean-deployment:
+	kubectl delete deployment myapp-deployment
