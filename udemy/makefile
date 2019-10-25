@@ -1,8 +1,15 @@
+info:
+	kubectl get pods
+	kubectl get replicationcontroller
+
 create-pod:
 	kubectl create -f pod-definition.yml
 
-info:
-	kubectl get pods
+create-rc:
+	kubectl create -f rc-definition.yml
 
-clean:
+clean-pod:
 	kubectl delete pod myapp-pod
+
+clean-rc:
+	kubectl delete replicationcontroller myapp-rc
