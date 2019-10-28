@@ -3,6 +3,7 @@ info:
 	kubectl get replicationcontroller
 	kubectl get replicaset
 	kubectl get deployments
+	kubectl get services
 
 rollout-status:
 	kubectl rollout status deployment/myapp-deployment
@@ -22,6 +23,9 @@ create-replicaset:
 create-deployment:
 	kubectl create -f deployment-definition.yml
 
+create-service:
+	kubectl create -f service-definition.yml
+
 clean-pod:
 	kubectl delete pod myapp-pod
 
@@ -33,3 +37,6 @@ clean-replicaset:
 
 clean-deployment:
 	kubectl delete deployment myapp-deployment
+
+clean-service:
+	kubectl delete service myapp-service
