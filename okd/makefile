@@ -4,6 +4,9 @@
 
 VERSION=1-0-0
 
+init:
+	oc project playground-heiko
+
 def-create:
 	oc create -f pod-definition.yml
 
